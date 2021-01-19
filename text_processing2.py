@@ -89,7 +89,8 @@ def to_camel_case(underscore_str):
             # >>> tp2.to_camel_case(underscore_str3)
             "alreadyCamel"
     """
-
+    if '_' not in underscore_str:
+        return underscore_str
     spltstr = underscore_str.lower().replace('_', ' ').split()
     lst = []
     if spltstr:
